@@ -1,16 +1,6 @@
-# Skeleton
+# Recruitment test
 
-A starter template for developing new Laravel apps for The Labour Party.
-
-* MapIt
-* Organise
-* A bunch of Heroku specific functions
-
-## Built by C6 for Labour
-
-This project was built by [C6 Digital](https://c6digital.io/) for The Labour Party.
-
-For any questions please contact: hello@c6digital.io
+This is an example project to be used during recruiting interviews.
 
 ## Installation
 
