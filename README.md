@@ -30,7 +30,13 @@ php artisan key:generate
 php artisan migrate
 ```
 
-6. Open app!
+6. Import health data
+
+```sh
+php artisan import:health-conditions
+```
+
+7. Open app!
 
 ## Assets
 
