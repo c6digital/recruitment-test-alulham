@@ -23,6 +23,7 @@ Some general notes:
 - This is supposed to be a simple prototype - we're not looking for production-ready code or a pixel perfect UI.
 - Feel free to build this in any way you want
 - Use whatever tools you would use in a real project (Google, AI, etc.)
+- Please use the full hour: if you finish early, use time to make the prototype as good as possible
 
 ## Installation
 
