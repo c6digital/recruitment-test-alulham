@@ -17,7 +17,8 @@ We don't have a full brief or designs yet - we are still in the discovery phase.
 - Use the UK parliamentary constituency to get the depression stats (`App\Models\HealthCondition`)
 - Display the depression stats on a results page
 - Add a share button that allows users to share their local stats via WhatsApp, with the data [pre-filled in the message](https://faq.whatsapp.com/5913398998672934#create-your-own-link-with-a-pre-filled-message)
-
+3. Submit a PR with your prototype
+  
 Some general notes:
 
 - This is supposed to be a simple prototype - we're not looking for production-ready code or a pixel perfect UI.
