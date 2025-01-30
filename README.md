@@ -19,12 +19,13 @@ We don't have a full brief or designs yet - we are still in the discovery phase.
 - Add a share button that allows users to share their local stats via WhatsApp, with the data [pre-filled in the message](https://faq.whatsapp.com/5913398998672934#create-your-own-link-with-a-pre-filled-message)
 3. Submit a PR with your prototype
   
-Some general notes:
 
-- This is supposed to be a simple prototype - we're not looking for production-ready code or a pixel perfect UI.
-- Feel free to build this in any way you want
-- Use whatever tools you would use in a real project (Google, AI, etc.)
-- Please use the full hour: if you finish early, use time to make the prototype as good as possible
+> [!TIP]
+> 
+> - This is supposed to be a simple prototype - we're not looking for production-ready code or a pixel perfect UI.
+> - Feel free to build this in any way you want
+> - Use whatever tools you would use in a real project (Google, AI, etc.)
+> - Please use the full hour: if you finish early, use time to make the prototype as good as possible
 
 ## Installation
 
