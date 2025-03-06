@@ -62,12 +62,17 @@ class ImportMPs extends Command
 
             $bar = $this->output->createProgressBar($totalResults);
             $bar->start();
-            $bar->advance(20);
+
+            $totalImported = count($content['items']);
+            $bar->advance(count($content['items']));
+            $startIndex += $totalImported;
 
             while ($content['items']) {
-                $startIndex += 20;
                 $content = $this->importPage($startIndex);
-                $bar->advance(20);
+
+                $totalImported = count($content['items']);
+                $bar->advance(count($content['items']));
+                $startIndex += $totalImported;
             }
             DB::commit();
             $bar->finish();
