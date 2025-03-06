@@ -25,7 +25,7 @@ class MpController extends Controller
 
         // TODO: could add this to the session?
         // Or store a partial message in the database?
-        $message = $request->request['message'];
+        $message = $request->request->get('message');
 
         return view('user_details', [
             'mp' => $mp,
