@@ -14,7 +14,7 @@
 <body>
     <header class="mb-4">
         <div class="container">
-            <h1>World Horse Welfare</h1>
+            <img alt="World Horse Welfare" src="{{ asset('img/logo.png') }}" />
 
             @if (session('errorMsg'))
             <div class="alert alert-danger" role="alert">
@@ -38,7 +38,7 @@
                     Registered charity no: 206658 and SC038384
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <img alt="Registered with Fundraising Regulator" src="" />
+                    <img alt="Registered with Fundraising Regulator" src="{{ asset('img/fundraising-regulator.png')  }}" />
                 </div>
             </div>
         </div>
