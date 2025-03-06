@@ -6,9 +6,9 @@
 
         <p>Enim in praesent cras eu purus sed proin orci fermentum. Eget urna dui diam venenatis. Arcu a sagittis habitant placerat nisi consequat enim aenean eleifend.</p>
 
-        <a href="#">Share on Facebook</a>
-        <a href="https://wa.me/?text={{ urlencode('I’ve just written to ' . $mp->name) }}">Share on WhatsApp</a>
-        <a href="#">Share on X</a>
+        <a class="share-btn" href="#">Share on Facebook</a>
+        <a class="share-btn" href="https://wa.me/?text={{ urlencode('I’ve just written to ' . $mp->name) }}">Share on WhatsApp</a>
+        <a class="share-btn" href="#">Share on X</a>
     </div>
 </x-base>
 
