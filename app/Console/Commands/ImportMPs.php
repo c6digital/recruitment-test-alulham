@@ -38,6 +38,7 @@ class ImportMPs extends Command
                 return $contact['email'];
             }
         }
+        $this->error('No email address found for ' . $mpId);
     }
 
     public function fetchMpPage($startIndex) {
