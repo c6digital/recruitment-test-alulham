@@ -1,5 +1,7 @@
 <x-base>
-    <h1>Thank you for joining our campaign</h1>
+    <img src="" alt="Horse" class="w-100" />
+
+    <h2>Thank you for joining our campaign</h2>
 
     <p>Enim in praesent cras eu purus sed proin orci fermentum. Eget urna dui diam venenatis. Arcu a sagittis habitant placerat nisi consequat enim aenean eleifend.</p>
 
