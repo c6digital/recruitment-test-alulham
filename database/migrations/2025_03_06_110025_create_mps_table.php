@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('mps', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email')->nullable();
             $table->string('party');
             $table->string('photo');
             $table->string('pcon_code');

@@ -23,26 +23,43 @@ class ImportMPs extends Command
      */
     protected $description = 'Import MPs from parliament.uk members API';
 
-    public $baseUrl = "https://members-api.parliament.uk/api/Members/Search?House=1&IsCurrentMember=true&take=20&skip=";
+    public $baseUrl = "https://members-api.parliament.uk/api/Members/";
 
-    public function importPage($startIndex) {
-        $response = Http::get($this->baseUrl . $startIndex);
+    public function fetchMpEmail($mpId) {
+        $response = Http::get($this->baseUrl . $mpId . '/Contact');
+        sleep(0.5);
+        $content = $response->json();
+        foreach ($content['value'] as $contact) {
+            // TODO: check which email address we should be preferring
+            if ($contact['type'] == 'Parliamentary office' && array_key_exists('email', $contact)) {
+                return $contact['email'];
+            }
+            if ($contact['type'] == 'Constituency office' && array_key_exists('email', $contact)) {
+                return $contact['email'];
+            }
+        }
+    }
+
+    public function fetchMpPage($startIndex) {
+        $response = Http::get($this->baseUrl . 'Search?House=1&IsCurrentMember=true&take=20&skip=' . $startIndex);
+        sleep(0.5);
         $content = $response->json();
         foreach ($content['items'] as $item) {
+            $mpId = $item['value']['id'];
+            $email = $this->fetchMpEmail($mpId);
             Mp::updateOrCreate([
-                'parliament_id' => $item['value']['id'],
+                'parliament_id' => $mpId,
             ], [
                 'name' => $item['value']['nameDisplayAs'], // TODO: should maybe use ‘address as’ here
+                'email' => $email,
                 'party' => $item['value']['latestParty']['name'],
                 'photo' => $item['value']['thumbnailUrl'], // TODO: hotlinking for now
                 'pcon_code' => $item['value']['latestHouseMembership']['membershipFromId'],
                 'pcon_name' => $item['value']['latestHouseMembership']['membershipFrom']
             ]);
         }
-        sleep(0.5);
         return $content;
     }
-
 
     /**
      * Execute the console command.
@@ -56,7 +73,7 @@ class ImportMPs extends Command
 
         try {
             $startIndex = 0;
-            $content = $this->importPage($startIndex);
+            $content = $this->fetchMpPage($startIndex);
 
             $totalResults = $content['totalResults'];
 
@@ -68,7 +85,7 @@ class ImportMPs extends Command
             $startIndex += $totalImported;
 
             while ($content['items']) {
-                $content = $this->importPage($startIndex);
+                $content = $this->fetchMpPage($startIndex);
 
                 $totalImported = count($content['items']);
                 $bar->advance(count($content['items']));

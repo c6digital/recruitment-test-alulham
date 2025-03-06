@@ -9,6 +9,7 @@ class Mp extends Model
     protected $fillable = [
         'parliament_id',
         'name',
+        'email',
         'party',
         'photo',
         'pcon_code',
