@@ -5,41 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lorem ipsum dolor sit amet consectetur</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     @vite('resources/css/app.css')
 
     <script defer data-domain="recruitment-test-alulham.c6digital.dev" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
-    <header class="mb-4">
-        <div class="container">
-            <img alt="World Horse Welfare" src="{{ asset('img/logo.png') }}" />
+    <header>
+        <img alt="World Horse Welfare" src="{{ asset('img/logo.png') }}" class="logo" />
 
-            @if (session('errorMsg'))
-            <div class="alert alert-danger" role="alert">
-                Error: {{ session('errorMsg') }}
-            </div>
-            @endif
+        @if (session('errorMsg'))
+        <div class="alert alert-danger" role="alert">
+            Error: {{ session('errorMsg') }}
         </div>
+        @endif
     </header>
 
-    <main>
-        <div class="container">
-            {{ $slot }}
-        </div>
+    <main class="bg-bottom bg-no-repeat" style="background-image: url({{ asset('img/footer.png') }})">
+        {{ $slot }}
     </main>
 
-    <footer class="mt-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    © World Horse Welfare<br>
-                    Registered charity no: 206658 and SC038384
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <img alt="Registered with Fundraising Regulator" src="{{ asset('img/fundraising-regulator.png')  }}" />
-                </div>
+    <footer>
+        <div class="grid grid-cols-2">
+            <div class="col-span-full md:col-span-1 text-center md:text-left">
+                © World Horse Welfare<br>
+                Registered charity no: 206658 and SC038384
+            </div>
+            <div class="col-span-full md:col-span-1">
+                <img class="block mx-auto" id="badge" alt="Registered with Fundraising Regulator" src="{{ asset('img/fundraising-regulator.png')  }}" />
             </div>
         </div>
     </footer>

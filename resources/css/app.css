@@ -1,8 +1,147 @@
-/*@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
-*/
+
+.mp-img {
+  width: 80px;
+
+  @screen md {
+    width: 100px;
+  }
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p, label, small {
+  color: var(--WHW-Dark-grey, #333);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  border-radius: 5px;
+  background: var(--WHW-Magenta, #E5007D);
+  text-transform: uppercase;
+  color: var(--White, #FFF);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  padding: 0px 40px;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--WHW-Navy, #043379);
+}
+
+dd {
+  font-weight: 700;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid var(--WHW-Dark-grey, #333);
+  background: var(--White, #FFF);
+  display: flex;
+  height: 45px;
+  padding: 16px 18px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+textarea {
+  border-radius: 5px;
+  border: 1px solid var(--WHW-Navy, #043379);
+  background: #FFF;
+  width: 100%;
+  padding: 30px;
+}
+
+.title-block {
+  padding: 14px;
+  text-align: center;
+  background: var(--WHW-Navy, #043379);
+  color: var(--White, #FFF);
+
+  @screen md {
+    padding-bottom: 16px;
+  }
+}
+
+header {
+  padding: 25px;
+
+  @screen md {
+    padding: 25px 100px;
+  }
+}
+
+main {
+  background: var(--WHW-Light-Grey, #F3F7F8);
+
+  padding-bottom: 103px;
+
+  @screen md {
+    padding: 70px 70px 153px;
+  }
+}
 
 footer {
-    background: var(--WHW-Navy, #043379);
+  background: var(--WHW-Navy, #043379);
+  color: var(--WHW-Light-Grey, #F3F7F8);
+  padding: 40px 80px 0;
+
+  .col-span-full {
+    padding-bottom: 40px;
+  }
+
+  #badge {
+    width: 182px;
+  }
+}
+
+.logo {
+  width: 218px;
+}
+
+.horse-img {
+  border-radius: 5px;
+  height: 220px;
+
+  @screen md {
+    height: 400px;
+  }
+}
+
+.card {
+  max-width: 685px;
+  margin: auto;
+  padding: 25px 25px 37.5px;
+  @screen md {
+    padding: 35px 35px 52.5px;
+    border-radius: 5px;
+    border: 1px solid var(--WHW-Navy, #043379);
+    background: var(--White, #FFF) !important;
+  }
+
+  background: var(--WHW-Light-Grey, #F3F7F8);
+
+  /* Dropshadow */
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
 }
