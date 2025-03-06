@@ -30,7 +30,6 @@ class ImportMPs extends Command
         sleep(0.5);
         $content = $response->json();
         foreach ($content['value'] as $contact) {
-            // TODO: check which email address we should be preferring
             if ($contact['type'] == 'Parliamentary office' && array_key_exists('email', $contact)) {
                 return $contact['email'];
             }
