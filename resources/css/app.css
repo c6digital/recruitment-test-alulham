@@ -10,11 +10,8 @@ p, label, small {
   color: var(--WHW-Dark-grey, #333);
 }
 
-small, .disclaimer {
-  font-size: 12px;
-}
-
 .disclaimer {
+  font-size: 12px;
   margin-top: 20px;
 
   p {
@@ -336,6 +333,10 @@ footer {
 
   p, small {
     color: var(--WHW-Light-Grey, #F3F7F8);
+  }
+
+  small {
+    font-size: 12px;
   }
 }
 
