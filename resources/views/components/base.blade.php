@@ -7,6 +7,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer data-domain="recruitment-test-alulham.c6digital.dev" src="https://plausible.io/js/script.js"></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>
 <body>
     <header>
