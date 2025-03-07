@@ -61,6 +61,7 @@ class MpController extends Controller
             'email' => 'required',
             'phone' => 'required',
             'mailing-list' => 'required',
+            'message' => '',
         ]);
 
         $full_name = $validated['first_name'] . ' ' . $validated['last_name'];
