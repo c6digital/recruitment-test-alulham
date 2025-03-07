@@ -37,17 +37,19 @@ class MpController extends Controller
     {
         $mp = Mp::findOrFail($id);
 
-        // TODO: Swap this
+        // Important TODO: Swap this!
         // $recipient = $mp->email;
         $recipient = $request->request->get('email');
 
-        $emailPayload = [
-            'from_name' => $request->request->get('first_name') . ' ' . $request->request->get('last_name'),
-            'from_email' => $request->request->get('email'),
-            'message' => $request->request->get('message'),
-            'mp' => $mp
-        ];
-        Mail::to($recipient)->send(new ConstituentMessage($emailPayload));
+        if ($recipient) {
+            $emailPayload = [
+                'from_name' => $request->request->get('first_name') . ' ' . $request->request->get('last_name'),
+                'from_email' => $request->request->get('email'),
+                'message' => $request->request->get('message'),
+                'mp' => $mp
+            ];
+            Mail::to($recipient)->send(new ConstituentMessage($emailPayload));
+        }
 
         // TODO: if they opted in, send to Mailchimp
         // TODO: store total sent by constituency
