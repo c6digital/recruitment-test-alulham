@@ -256,18 +256,16 @@ h2 {
 }
 
 form {
-/*  @screen md {*/
-    .form-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      align-self: stretch;
+  .form-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
 
-      div {
-        flex: 1;
-      }
+    div {
+      flex: 1;
     }
-/*  }*/
+  }
 
   .form-control {
     width: 100%;
