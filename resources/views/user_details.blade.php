@@ -31,14 +31,14 @@
                     <div>
                         <label for="first_name">First name<span class="required">*</span></label>
                         @error('first_name')
-                          <div class="validation-error">{{ $message }}</div>
+                          <div class="validation-error">First name is a mandatory field</div>
                         @enderror
                         <input class="form-control" type="text" name="first_name" value="{{ old('first_name') }}" />
                     </div>
                     <div>
                         <label for="last_name">Last name<span class="required">*</span></label>
                         @error('last_name')
-                          <div class="validation-error">{{ $message }}</div>
+                          <div class="validation-error">Last name is a mandatory field</div>
                         @enderror
                         <input class="form-control" type="text" name="last_name" value="{{ old('last_name') }}" />
                     </div>
@@ -46,13 +46,13 @@
 
                 <label for="email">Email address<span class="required">*</span></label>
                 @error('email')
-                  <div class="validation-error">{{ $message }}</div>
+                  <div class="validation-error">Email address is a mandatory field</div>
                 @enderror
                 <input class="form-control" type="email" name="email" value="{{ old('email') }}" />
 
                 <label for="phone">Phone number<span class="required">*</span></label>
                 @error('phone')
-                  <div class="validation-error">{{ $message }}</div>
+                  <div class="validation-error">Phone number is a mandatory field</div>
                 @enderror
                 <input class="form-control !mb-0" type="tel" name="phone" autocomplete="tel" value="{{ old('phone') }}" />
             </div>
@@ -61,7 +61,7 @@
                 <p class="radio-label">Would you like to receive emails from us with news and updates about our work and fundraising? If you already receive our emails, choosing ‘Yes’ will mean this continues. You can opt out at any time, we promise.<span class="required">*</span></p>
 
                 @error('mailing-list')
-                  <div class="validation-error">{{ $message }}</div>
+                  <div class="validation-error">Email updates is a mandatory field</div>
                 @enderror
 
                 <div class="form-check">
