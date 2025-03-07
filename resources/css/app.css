@@ -22,6 +22,10 @@ p:last-child {
 .disclaimer {
   font-size: 12px;
   margin-top: 20px;
+
+  p {
+    line-height: normal;
+  }
 }
 
 label {
