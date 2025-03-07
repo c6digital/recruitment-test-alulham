@@ -42,7 +42,7 @@
                 <input class="form-control" type="email" name="email" required />
 
                 <label for="phone">Phone number<span class="required">*</span></label>
-                <input class="form-control" type="tel" name="phone" autocomplete="tel" required />
+                <input class="form-control !mb-0" type="tel" name="phone" autocomplete="tel" required />
             </div>
 
             <div class="panel">
