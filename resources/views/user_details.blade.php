@@ -1,56 +1,77 @@
 <x-base>
     <div class="card">
-        <h2>Email {{ $mp->name }}</h2>
-
-        <p>Enim in praesent cras eu purus sed proin orci fermentum. Eget urna dui diam venenatis. Arcu a sagittis habitant placerat nisi consequat enim aenean eleifend.</p>
-
         <form method="POST" action="{{ route('mp.send_email', $mp->id) }}">
             @csrf
 
-            <input type="hidden" name="message" value="{{ $message }}" />
-
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="first_name">First name*</label>
-                    <input class="form-control" type="text" name="first_name" required />
+            <div class="panel">
+                <div class="progress-bar">
+                    <span class="step step-complete" style="background-image: url({{ asset('img/step-complete.svg') }})"></span>
+                    <span class="stroke" style="background-image: url({{ asset('img/stroke.svg') }})"></span>
+                    <span class="step step-complete" style="background-image: url({{ asset('img/step-complete.svg') }})"></span>
+                    <span class="stroke" style="background-image: url({{ asset('img/stroke.svg') }})"></span>
+                    <span class="step step-todo" style="background-image: url({{ asset('img/step-todo.svg') }})"></span>
                 </div>
-                <div class="col-md-6">
-                    <label for="last_name">Last name*</label>
-                    <input class="form-control" type="text" name="last_name" required />
+                <div class="progress-bar-labels">
+                    <span>Find</span>
+                    <span>Message</span>
+                    <span>Send</span>
                 </div>
             </div>
 
-            <label for="email">Email address*</label>
-            <input class="form-control" type="email" name="email" required />
+            <div class="panel">
+                <h2>Email {{ $mp->name }}</h2>
 
-            <label for="phone">Phone number*</label>
-            <input class="form-control" type="tel" name="phone" required />
-
-            <p>Would you like to receive emails from us with news and updates about our work and fundraising? If you already receive our emails, choosing ‘Yes’ will mean this continues. You can opt out at any time, we promise.*</p>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="opt-in" id="opt-in-yes">
-              <label class="form-check-label" for="opt-in-yes">
-                <strong>Yes!</strong> I would like to receive email updates
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="opt-in" id="opt-in-no" checked>
-              <label class="form-check-label" for="opt-in-no">
-                <strong>No</strong> thanks
-              </label>
+                <p>Enim in praesent cras eu purus sed proin orci fermentum. Eget urna dui diam venenatis. Arcu a sagittis habitant placerat nisi consequat enim aenean eleifend.</p>
             </div>
 
-            <p class="d-none">Are you sure? If you don't tick yes, we won't be able to keep you updated on this campaign and all our work and fundraising. You can opt out at any time, promise.</p>
+            <div class="panel">
+                <input type="hidden" name="message" value="{{ $message }}" />
 
-            <button type="submit" class="btn">Send my email</button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="first_name">First name<span class="required">*</span></label>
+                        <input class="form-control" type="text" name="first_name" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="last_name">Last name<span class="required">*</span></label>
+                        <input class="form-control" type="text" name="last_name" required />
+                    </div>
+                </div>
+
+                <label for="email">Email address<span class="required">*</span></label>
+                <input class="form-control" type="email" name="email" required />
+
+                <label for="phone">Phone number<span class="required">*</span></label>
+                <input class="form-control" type="tel" name="phone" autocomplete="tel" required />
+            </div>
+
+            <div class="panel">
+                <p>Would you like to receive emails from us with news and updates about our work and fundraising? If you already receive our emails, choosing ‘Yes’ will mean this continues. You can opt out at any time, we promise.<span class="required">*</span></p>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="mailing-list" id="opt-in">
+                  <label class="form-check-label" for="opt-in">
+                    <strong>Yes!</strong> I would like to receive email updates
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="mailing-list" id="opt-out" checked>
+                  <label class="form-check-label" for="opt-out">
+                    <strong>No</strong> thanks
+                  </label>
+                </div>
+
+                <p class="notice" id="opt-out-notice">Are you sure? If you don't tick yes, we won't be able to keep you updated on this campaign and all our work and fundraising. You can opt out at any time, promise.</p>
+            </div>
+
+            <button type="submit" class="form-control">Send my email</button>
 
             <p>
                 <small>World Horse Welfare may process your data and enhance the details given by using publicly available information to help inform our fundraising or charitable activities, enabling us to help more horses.</small>
             </p>
 
             <p>
-                <small>World Horse Welfare values our supporters and guarantees that your details will never be shared with third parties for marketing purposes. Please visit www.worldhorsewelfare.org/privacy for more information.</small>
+                <small>World Horse Welfare values our supporters and guarantees that your details will never be shared with third parties for marketing purposes. Please visit <a target="_blank" href="https://www.worldhorsewelfare.org/privacy">www.worldhorsewelfare.org/privacy</a> for more information.</small>
             </p>
 
             <p>

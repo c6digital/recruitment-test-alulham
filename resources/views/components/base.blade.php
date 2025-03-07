@@ -24,14 +24,12 @@
     </main>
 
     <footer>
-        <div class="grid grid-cols-2">
-            <div class="col-span-full md:col-span-1 text-center md:text-left">
-                © World Horse Welfare<br>
-                Registered charity no: 206658 and SC038384
+        <div class="footer-cols">
+            <div class="text-center md:text-left">
+                <p>© World Horse Welfare</p>
+                <small>Registered charity no: 206658 and SC038384</small>
             </div>
-            <div class="col-span-full md:col-span-1">
-                <img class="block mx-auto" id="badge" alt="Registered with Fundraising Regulator" src="{{ asset('img/fundraising-regulator.png')  }}" />
-            </div>
+            <img class="block footer-badge" alt="Registered with Fundraising Regulator" src="{{ asset('img/fundraising-regulator.png')  }}" />
         </div>
     </footer>
 </body>
