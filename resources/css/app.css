@@ -13,10 +13,10 @@ p, label, small {
 p {
   margin-bottom: 20px;
   line-height: normal;
-}
 
-p:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .disclaimer {
@@ -24,7 +24,12 @@ p:last-child {
   margin-top: 20px;
 
   p {
+    margin-bottom: 10px;
     line-height: normal;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
