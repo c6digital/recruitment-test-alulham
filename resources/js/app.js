@@ -16,15 +16,18 @@ document.querySelectorAll('input[name="mailing-list"]').forEach((radio) => {
   });
 });
 
-document.getElementById('read-more').addEventListener('click', function (ev) {
-    ev.preventDefault();
+const readMore = document.getElementById('read-more');
+if (readMore) {
+    readMore.addEventListener('click', function (ev) {
+        ev.preventDefault();
 
-    document.querySelectorAll('.hidden').forEach(paragraph => {
-        paragraph.style.display = 'block';
-        setTimeout(() => {
-            paragraph.classList.add('show');
-        }, 10);
+        document.querySelectorAll('.hidden').forEach(paragraph => {
+            paragraph.style.display = 'block';
+            setTimeout(() => {
+                paragraph.classList.add('show');
+            }, 10);
+        });
+
+        this.style.display = 'none';
     });
-
-    this.style.display = 'none';
-});
+}
