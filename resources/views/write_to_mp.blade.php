@@ -31,9 +31,23 @@
             </div>
 
             <div class="panel">
-                <textarea rows="10" class="form-control" name="message">Dear {{ $mp->name }},
+                <textarea rows="10" class="form-control" name="message">Dear {{ $mp->name }}
 
-Lorem ipsum dolor sit amet consectetur. Id bibendum porta enim rhoncus. Elementum rutrum at et et a. Ligula sodales eleifend posuere a faucibus ullamcorper aliquet. Suspendisse et amet ultrices venenatis eget vel. Tristique est id risus massa. Sed ac sem montes maecenas arcu mus lorem malesuada tempus. Molestie ac sed felis sit ultricies maecenas eu. Integer tristique urna sociis facilisi diam. Id volutpat est diam eget volutpat non eu. Integer at lacus leo congue facilisis eget. Iaculis gravida sagittis semper id porttitor.</textarea>
+I am writing to ask if you'll stand up for the thousands of UK horses, ponies and donkeys that are smuggled across borders in horrific conditions.
+
+Horse smuggling is made all too easy by the current horse passport laws. Equines are nowhere near as traceable as livestock and the paper-based passport system means they can be given a new passport and inserted with a second microchip to match, to hide their past.
+
+The ban on live exports to slaughter was a fantastic first step, but it needs to be enforceable and enforced. Will you commit to:
+- Working to ensure that secondary legislation is passed to enforce the ban on live exports to slaughter, and that enforcement agencies are appropriately resourced
+- Supporting the introduction of an improved equine identification and traceability system?
+
+You can watch this film to learn more about the Dover 26: https://www.youtube.com/watch?v=Ztocoyq74sg&t=1s
+
+If you would like to learn more about horse smuggling and what you can do to help the horses caught up in this trade, please contact Kim Ayling at World Horse Welfare (publicaffairs@worldhorsewelfare.org), who would be delighted to arrange a meeting.
+
+I look forward to hearing from you.
+
+Yours sincerely,</textarea>
             </div>
 
             <div class="panel">

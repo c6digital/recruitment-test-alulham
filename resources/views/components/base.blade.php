@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lorem ipsum dolor sit amet consectetur</title>
+    <title>Email your MP! - World Horse Welfare</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer data-domain="recruitment-test-alulham.c6digital.dev" src="https://plausible.io/js/script.js"></script>

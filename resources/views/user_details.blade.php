@@ -21,7 +21,7 @@
             <div class="panel">
                 <h2>Email {{ $mp->name }}</h2>
 
-                <p>Enim in praesent cras eu purus sed proin orci fermentum. Eget urna dui diam venenatis. Arcu a sagittis habitant placerat nisi consequat enim aenean eleifend.</p>
+                <p>We will send the email on your behalf. Just fill in your name and email and we will also share your postcode, so that your MP knows that you live within their constituency and can respond to you.</p>
             </div>
 
             <div class="panel">
