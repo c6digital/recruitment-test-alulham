@@ -238,7 +238,7 @@ form {
     line-height: 25px;
   }
 
-  input {
+  input:not([type="radio"]) {
     margin: 10px 0 20px;
     border: 1px solid var(--WHW-Dark-grey, #333);
     background: var(--White, #FFF);
