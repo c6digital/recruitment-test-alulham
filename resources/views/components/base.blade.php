@@ -12,12 +12,6 @@
 <body>
     <header>
         <img alt="World Horse Welfare" srcset="{{ asset('img/logo-mob.png') }} 527w, {{ asset('img/logo.png') }} 500w" src="{{ asset('img/logo.png') }}" class="logo" sizes="(max-width: 767px) 379px, 218px" />
-
-        @if (session('errorMsg'))
-        <div class="alert alert-danger" role="alert">
-            Error: {{ session('errorMsg') }}
-        </div>
-        @endif
     </header>
 
     <main class="bg-bottom bg-repeat-x" style="background-image: url({{ asset('img/footer.png') }})">

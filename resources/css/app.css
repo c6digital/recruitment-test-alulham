@@ -270,7 +270,7 @@ form {
     border-radius: 5px;
   }
 
-  .required {
+  .required, .validation-error {
     color: var(--Red, #F00);
   }
 

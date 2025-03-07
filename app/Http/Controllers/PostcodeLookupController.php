@@ -23,7 +23,7 @@ class PostcodeLookupController extends Controller
 
         # TODO: check status code
         if ($response->status() != 200) {
-            return redirect(route('postcode.show'))->with('errorMsg', 'Something went wrong');
+            return redirect(route('postcode.show'))->with('postcode_error', 'Please enter a valid UK postcode');
         }
 
         # look up the constituency

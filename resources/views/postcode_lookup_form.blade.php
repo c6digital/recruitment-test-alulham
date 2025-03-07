@@ -39,6 +39,9 @@
                     </div>
 
                     <label for="postcode">Postcode<span class="required">*</span></label>
+                    @if (session('postcode_error'))
+                    <div class="validation-error">{{ session('postcode_error') }}</div>
+                    @endif
                     <input type="text" name="postcode" autofocus class="form-control text-uppercase" />
                     <button type="submit" class="form-control">Find my MP</button>
                 </form>
