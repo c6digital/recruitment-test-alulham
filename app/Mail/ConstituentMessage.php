@@ -28,6 +28,9 @@ class ConstituentMessage extends Mailable
     {
         return new Envelope(
             from: new Address(env('MAIL_FROM_ADDRESS'), $this->payload['from_name']),
+            replyTo: [
+                new Address($this->payload['from_email'], $this->payload['from_name']),
+            ],
             subject: 'How to better treat horses in the UK',
         );
     }
