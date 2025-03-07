@@ -23,7 +23,7 @@ class PostcodeLookupController extends Controller
 
         # TODO: check status code
         if ($response->status() != 200) {
-            return redirect(route('health.show'))->with('errorMsg', 'Something went wrong');
+            return redirect(route('postcode.show'))->with('errorMsg', 'Something went wrong');
         }
 
         # look up the constituency
