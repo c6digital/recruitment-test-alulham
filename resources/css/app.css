@@ -238,8 +238,8 @@ form {
     line-height: 25px;
   }
 
-  input[type="radio"] {
-    margin-top: 20px;
+  .form-check, .radio-label {
+    margin-bottom: 20px;
   }
 
   input:not([type="radio"]) {

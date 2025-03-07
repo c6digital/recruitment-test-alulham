@@ -46,17 +46,17 @@
             </div>
 
             <div class="panel">
-                <p>Would you like to receive emails from us with news and updates about our work and fundraising? If you already receive our emails, choosing ‘Yes’ will mean this continues. You can opt out at any time, we promise.<span class="required">*</span></p>
+                <p class="radio-label">Would you like to receive emails from us with news and updates about our work and fundraising? If you already receive our emails, choosing ‘Yes’ will mean this continues. You can opt out at any time, we promise.<span class="required">*</span></p>
 
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="mailing-list" id="opt-in">
-                  <label class="form-check-label" for="opt-in">
+                  <input type="radio" name="mailing-list" id="opt-in">
+                  <label for="opt-in">
                     <strong>Yes!</strong> I would like to receive email updates
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="mailing-list" id="opt-out">
-                  <label class="form-check-label" for="opt-out">
+                  <input type="radio" name="mailing-list" id="opt-out">
+                  <label for="opt-out">
                     <strong>No</strong> thanks
                   </label>
                 </div>
