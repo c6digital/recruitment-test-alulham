@@ -7,8 +7,10 @@ use App\Mail\ConstituentMessage;
 use App\Mail\ThankYouMessage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
+use MailchimpMarketing\ApiClient;
 
 class MpController extends Controller
 {
@@ -44,8 +46,20 @@ class MpController extends Controller
     }
 
     public function send_to_mailchimp($email, $first_name, $last_name, $phone) {
-        // 'https://${dc}.api.mailchimp.com/3.0/lists/{list_id}/members/{subscriber_hash}';
-        // $response = Http::put('');
+        $client = new ApiClient();
+
+        $client->setConfig([
+            'apiKey' => Config::get('services.mailchimp.key'),
+            'server' => Config::get('services.mailchimp.server_prefix'),
+        ]);
+
+        $audienceId = Config::get('services.mailchimp.audience_id');
+        $subscriberHash = md5(strtolower($email));
+
+        $response = $client->lists->setListMember($audienceId, $subscriberHash, [
+            "email_address" => $email,
+            "status_if_new" => "pending",
+        ]);
     }
 
     public function send_email($id, Request $request): RedirectResponse
