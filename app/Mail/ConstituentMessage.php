@@ -41,7 +41,7 @@ class ConstituentMessage extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'mail.constituent_message',
+            view: 'mail.constituent_message',
             with: $this->payload,
         );
     }

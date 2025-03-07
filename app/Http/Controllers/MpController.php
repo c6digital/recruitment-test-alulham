@@ -60,7 +60,7 @@ class MpController extends Controller
             $emailPayload = [
                 'from_name' => $first_name . ' ' . $last_name,
                 'from_email' => $email,
-                'message' => $message,
+                'msg' => $message,
                 'mp' => $mp
             ];
             Mail::to($recipient)->send(new ConstituentMessage($emailPayload));

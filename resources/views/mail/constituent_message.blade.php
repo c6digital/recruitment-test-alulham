@@ -1,5 +1,3 @@
-<x-mail::message>
-{{ $message }}
+{!! \Illuminate\Support\Str::markdown($msg) !!}
 
-{{ $from_name }} ({{ $from_email }})
-</x-mail::message>
+<p>{{ $from_name }} (<a href="mailto:{{ $from_email }}">{{ $from_email }}</a>)</p>
