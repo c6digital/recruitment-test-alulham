@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="panel">
-                <h2>Write to {{ $mp->name }}</h2>
+                <h2 class="my-0">Write to {{ $mp->name }}</h2>
             </div>
             <div class="mp-bio panel">
                 <img src="{{ $mp->photo }}" class="rounded-full mp-img" alt="{{ $mp->name }}" />

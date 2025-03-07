@@ -50,6 +50,7 @@ h2 {
   font-size: 24px;
   font-weight: 800;
   color: var(--WHW-Navy, #043379);
+  margin-bottom: 20px;
 }
 
 .progress-bar, .progress-bar-labels {

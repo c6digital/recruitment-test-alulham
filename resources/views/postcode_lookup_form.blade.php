@@ -6,7 +6,7 @@
             </div>
 
             <div class="panel">
-                <h2>Lorem ipsum dolor sit amet consectetur</h2>
+                <h2 class="my-0">Lorem ipsum dolor sit amet consectetur</h2>
             </div>
 
             <div class="panel">
