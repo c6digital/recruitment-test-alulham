@@ -54,7 +54,7 @@
                     <strong>Yes!</strong> I would like to receive email updates
                   </label>
                 </div>
-                <div class="form-check">
+                <div class="form-check !mb-0">
                   <input type="radio" name="mailing-list" value="no" id="opt-out" required>
                   <label for="opt-out">
                     <strong>No</strong> thanks
