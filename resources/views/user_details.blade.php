@@ -66,17 +66,13 @@
 
             <button type="submit" class="form-control">Send my email</button>
 
-            <p>
-                <small>World Horse Welfare may process your data and enhance the details given by using publicly available information to help inform our fundraising or charitable activities, enabling us to help more horses.</small>
-            </p>
+            <div class="disclaimer">
+                <p>World Horse Welfare may process your data and enhance the details given by using publicly available information to help inform our fundraising or charitable activities, enabling us to help more horses.</p>
 
-            <p>
-                <small>World Horse Welfare values our supporters and guarantees that your details will never be shared with third parties for marketing purposes. Please visit <a target="_blank" href="https://www.worldhorsewelfare.org/privacy">www.worldhorsewelfare.org/privacy</a> for more information.</small>
-            </p>
+                <p>World Horse Welfare values our supporters and guarantees that your details will never be shared with third parties for marketing purposes. Please visit <a target="_blank" href="https://www.worldhorsewelfare.org/privacy">www.worldhorsewelfare.org/privacy</a> for more information.</p>
 
-            <p>
-                <small>If you would ever like to change the way you hear from World Horse Welfare or change how we process your data, please call +44(0)1953 497239 or email <a target="_blank" href="mailto:info@worldhorsewelfare.org">info@worldhorsewelfare.org</a></small>
-            </p>
+                <p>If you would ever like to change the way you hear from World Horse Welfare or change how we process your data, please call +44(0)1953 497239 or email <a target="_blank" href="mailto:info@worldhorsewelfare.org">info@worldhorsewelfare.org</a></p>
+            </div>
         </form>
     </div>
 </x-base>
