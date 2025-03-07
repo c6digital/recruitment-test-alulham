@@ -10,7 +10,7 @@
             </div>
 
             <div class="panel">
-                <img src="{{ asset('img/horse.jpeg') }}" class="horse-img" alt="Lorem ipsum dolor sit amet consectetur" />
+                <img src="{{ asset('img/horse.jpeg') }}" class="horse-img" />
             </div>
 
             <div class="panel">
