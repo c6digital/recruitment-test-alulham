@@ -27,12 +27,12 @@
             <div class="panel">
                 <input type="hidden" name="message" value="{{ $message }}" />
 
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="form-row">
+                    <div>
                         <label for="first_name">First name<span class="required">*</span></label>
                         <input class="form-control" type="text" name="first_name" required />
                     </div>
-                    <div class="col-md-6">
+                    <div>
                         <label for="last_name">Last name<span class="required">*</span></label>
                         <input class="form-control" type="text" name="last_name" required />
                     </div>
