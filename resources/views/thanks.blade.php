@@ -18,9 +18,9 @@
         </div>
 
         <div class="share-btns">
-            <a class="share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('postcode.show')) }}">Share on Facebook</a>
-            <a class="share-btn whatsapp" href="https://wa.me/?text={{ urlencode('I’ve just written to ' . $mp->name) }}">Share on WhatsApp</a>
-            <a class="share-btn x" href="https://x.com/intent/post?text={{ urlencode('I’ve just written to ' . $mp->name) }}">Share on X</a>
+            <a class="share-btn fb" href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('postcode.show')) }}"><span class="share-icon fb" style="background-image: url({{ asset('img/fb.svg') }})"></span>Share on Facebook</a>
+            <a class="share-btn wa" href="https://wa.me/?text={{ urlencode('I’ve just written to ' . $mp->name) }}"><span class="share-icon wa" style="background-image: url({{ asset('img/wa.svg') }})"></span>Share on WhatsApp</a>
+            <a class="share-btn x" href="https://x.com/intent/post?text={{ urlencode('I’ve just written to ' . $mp->name) }}"><span class="share-icon x" style="background-image: url({{ asset('img/x.svg') }})"></span>Share on X</a>
         </div>
     </div>
 </x-base>

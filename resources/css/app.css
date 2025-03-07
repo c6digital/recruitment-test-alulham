@@ -172,14 +172,33 @@ h2 {
     font-size: 18px;
     font-weight: 700;
 
-    &.facebook {
+    &.fb {
       background: var(--Facebook, #4167B2);
     }
-    &.whatsapp {
+    &.wa {
       background: #25D366;
     }
     &.x {
       background: var(--Black, #000);
+    }
+
+    .share-icon {
+      margin-right: 20px;
+
+      &.fb {
+        height: 24px;
+        width: 11px;
+      }
+
+      &.wa {
+        height: 24px;
+        width: 21px;
+      }
+
+      &.x {
+        height: 20px;
+        width: 21px;
+      }
     }
   }
 }
