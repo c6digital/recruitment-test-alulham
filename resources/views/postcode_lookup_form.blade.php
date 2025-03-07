@@ -15,11 +15,11 @@
 
             <div class="panel">
                 <p>Lorem ipsum dolor sit amet consectetur. Convallis ac nisl ut curabitur dui lorem. Vulputate sit eu elit aliquam blandit. Sagittis purus ut sed duis urna imperdiet. Habitant ac in nisl turpis eu amet vitae laoreet sit. Risus ut diam augue fames posuere. Vulputate viverra ullamcorper adipiscing quisque at. Natoque adipiscing ut dui arcu scelerisque tempus augue.</p>
-            </div>
 
-            <p>
-                <strong>Read more</strong>
-            </p>
+                <p>
+                    <a href="#" class="read-more">Read more<span style="background-image: url({{ asset('img/read-more.svg') }})"></span></a>
+                </p>
+            </div>
         </div>
 
         <div>
