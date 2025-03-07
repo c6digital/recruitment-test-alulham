@@ -40,4 +40,9 @@ return [
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.eu.mailgun.net'),
         'scheme' => 'https',
     ],
+    'mailchimp' => [
+        'key' => env('MAILCHIMP_API'),
+        'audience_id' => env('MAILCHIMP_AUDIENCE_ID'),
+        'server_prefix' => env('MAILCHIMP_SERVER_PREFIX'),
+    ],
 ];
