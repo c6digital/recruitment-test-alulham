@@ -70,7 +70,7 @@
                     <strong>Yes!</strong> I would like to receive email updates
                   </label>
                 </div>
-                <div class="form-check !mb-0">
+                <div class="form-check">
                   <input type="radio" name="mailing-list" value="no" id="opt-out" {{ old('mailing-list') == 'no' ? 'checked' : '' }}>
                   <label for="opt-out">
                     <strong>No</strong> thanks
@@ -78,9 +78,9 @@
                 </div>
 
                 <p class="notice" id="opt-out-notice">Are you sure? If you don't tick yes, we won't be able to keep you updated on this campaign and all our work and fundraising. You can opt out at any time, promise.</p>
-            </div>
 
-            <button type="submit" class="form-control">Send my email</button>
+                <button type="submit" class="form-control">Send my email</button>
+            </div>
 
             <div class="disclaimer">
                 <p>World Horse Welfare may process your data and enhance the details given by using publicly available information to help inform our fundraising or charitable activities, enabling us to help more horses.</p>

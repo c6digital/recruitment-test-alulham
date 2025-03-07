@@ -21,7 +21,6 @@ p {
 
 .disclaimer {
   font-size: 12px;
-  margin-top: 20px;
 
   p {
     margin-bottom: 10px;
@@ -300,7 +299,7 @@ form {
   }
 
   .form-check, .radio-label {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   input:not([type="radio"]) {
