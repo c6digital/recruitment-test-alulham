@@ -81,7 +81,7 @@ class MpController extends Controller
             Mail::to($recipient)->send(new ConstituentMessage($emailPayload));
         }
 
-        Mail::to($email)->send(new ThankYouMessage([
+        Mail::to($validated['email'])->send(new ThankYouMessage([
             'name' => $full_name
         ]));
 
