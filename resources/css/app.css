@@ -80,12 +80,9 @@ h2 {
   }
 
   .step {
-    height: 40px;
-    width: 40px;
-  }
-
-  .step-complete {
-    width: 41px;
+    height: 27px;
+    width: 27px;
+    background-size: cover;
   }
 
   .disabled {

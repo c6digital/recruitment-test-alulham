@@ -5,11 +5,11 @@
 
             <div class="panel">
                 <div class="progress-bar">
-                    <span class="step step-complete" style="background-image: url({{ asset('img/step-complete.svg') }})"></span>
+                    <span class="step" style="background-image: url({{ asset('img/step-complete.svg') }})"></span>
                     <span class="stroke"></span>
-                    <span class="step step-complete" style="background-image: url({{ asset('img/step-complete.svg') }})"></span>
+                    <span class="step" style="background-image: url({{ asset('img/step-complete.svg') }})"></span>
                     <span class="stroke"></span>
-                    <span class="step step-todo" style="background-image: url({{ asset('img/step-todo.svg') }})"></span>
+                    <span class="step" style="background-image: url({{ asset('img/step-todo.svg') }})"></span>
                 </div>
                 <div class="progress-bar-labels">
                     <span>Find</span>
