@@ -1,7 +1,7 @@
 import './bootstrap';
 
 document.querySelectorAll('input[name="mailing-list"]').forEach((radio) => {
-  radio.addEventListener('change', function() {
+  radio.addEventListener('change', function () {
     const notice = document.getElementById('opt-out-notice');
     if (document.getElementById('opt-out').checked) {
       notice.style.maxHeight = (notice.scrollHeight + 40) + "px";
@@ -14,4 +14,17 @@ document.querySelectorAll('input[name="mailing-list"]').forEach((radio) => {
       notice.style.paddingBottom = "0";
     }
   });
+});
+
+document.getElementById('read-more').addEventListener('click', function (ev) {
+    ev.preventDefault();
+
+    document.querySelectorAll('.hidden').forEach(paragraph => {
+        paragraph.style.display = 'block';
+        setTimeout(() => {
+            paragraph.classList.add('show');
+        }, 10);
+    });
+
+    this.style.display = 'none';
 });

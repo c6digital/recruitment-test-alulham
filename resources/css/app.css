@@ -360,3 +360,13 @@ footer {
 .text-uppercase {
   text-transform: uppercase;
 }
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hidden.show {
+  display: block;
+  opacity: 1;
+}
