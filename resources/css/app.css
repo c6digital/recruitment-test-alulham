@@ -271,11 +271,6 @@ form {
     }
   }
 
-  .form-control {
-    width: 100%;
-    border-radius: 5px;
-  }
-
   .required, .validation-error {
     color: var(--Red, #F00);
   }
@@ -290,6 +285,10 @@ form {
     line-height: 25px;
   }
 
+  .form-control.invalid input {
+    border-color: red;
+  }
+
   .form-check label {
     padding-left: 10px;
   }
@@ -300,6 +299,11 @@ form {
 
   .form-check, .radio-label {
     margin-bottom: 10px;
+  }
+
+  input:not([type="radio"]), button, textarea {
+    width: 100%;
+    border-radius: 5px;
   }
 
   input:not([type="radio"]) {

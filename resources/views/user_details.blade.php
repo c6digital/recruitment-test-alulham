@@ -28,58 +28,64 @@
                 <input type="hidden" name="message" value="{{ $message }}" />
 
                 <div class="form-row">
-                    <div>
+                    <div class="form-control @error('first_name') invalid @enderror">
                         <label for="first_name">First name<span class="required">*</span></label>
                         @error('first_name')
                           <div class="validation-error">First name is a mandatory field</div>
                         @enderror
-                        <input class="form-control" type="text" name="first_name" value="{{ old('first_name') }}" />
+                        <input type="text" name="first_name" value="{{ old('first_name') }}" />
                     </div>
-                    <div>
+                    <div class="form-control @error('last_name') invalid @enderror">
                         <label for="last_name">Last name<span class="required">*</span></label>
                         @error('last_name')
                           <div class="validation-error">Last name is a mandatory field</div>
                         @enderror
-                        <input class="form-control" type="text" name="last_name" value="{{ old('last_name') }}" />
+                        <input type="text" name="last_name" value="{{ old('last_name') }}" />
                     </div>
                 </div>
 
-                <label for="email">Email address<span class="required">*</span></label>
-                @error('email')
-                  <div class="validation-error">Email address is a mandatory field</div>
-                @enderror
-                <input class="form-control" type="email" name="email" value="{{ old('email') }}" />
+                <div class="form-control @error('email') invalid @enderror">
+                    <label for="email">Email address<span class="required">*</span></label>
+                    @error('email')
+                      <div class="validation-error">Email address is a mandatory field</div>
+                    @enderror
+                    <input type="email" name="email" value="{{ old('email') }}" />
+                </div>
 
-                <label for="phone">Phone number<span class="required">*</span></label>
-                @error('phone')
-                  <div class="validation-error">Phone number is a mandatory field</div>
-                @enderror
-                <input class="form-control !mb-0" type="tel" name="phone" autocomplete="tel" value="{{ old('phone') }}" />
+                <div class="form-control @error('phone') invalid @enderror">
+                    <label for="phone">Phone number<span class="required">*</span></label>
+                    @error('phone')
+                      <div class="validation-error">Phone number is a mandatory field</div>
+                    @enderror
+                    <input class="!mb-0" type="tel" name="phone" autocomplete="tel" value="{{ old('phone') }}" />
+                </div>
             </div>
 
             <div class="panel">
-                <p class="radio-label">Would you like to receive emails from us with news and updates about our work and fundraising? If you already receive our emails, choosing ‘Yes’ will mean this continues. You can opt out at any time, we promise.<span class="required">*</span></p>
+                <div class="form-control @error('mailing-list') invalid @enderror">
+                    <p class="radio-label">Would you like to receive emails from us with news and updates about our work and fundraising? If you already receive our emails, choosing ‘Yes’ will mean this continues. You can opt out at any time, we promise.<span class="required">*</span></p>
 
-                @error('mailing-list')
-                  <div class="validation-error">Email updates is a mandatory field</div>
-                @enderror
+                    @error('mailing-list')
+                      <div class="validation-error">Email updates is a mandatory field</div>
+                    @enderror
 
-                <div class="form-check">
-                  <input type="radio" name="mailing-list" value="yes" id="opt-in" {{ old('mailing-list') == 'yes' ? 'checked' : '' }}>
-                  <label for="opt-in">
-                    <strong>Yes!</strong> I would like to receive email updates
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input type="radio" name="mailing-list" value="no" id="opt-out" {{ old('mailing-list') == 'no' ? 'checked' : '' }}>
-                  <label for="opt-out">
-                    <strong>No</strong> thanks
-                  </label>
+                    <div class="form-check">
+                      <input type="radio" name="mailing-list" value="yes" id="opt-in" {{ old('mailing-list') == 'yes' ? 'checked' : '' }}>
+                      <label for="opt-in">
+                        <strong>Yes!</strong> I would like to receive email updates
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name="mailing-list" value="no" id="opt-out" {{ old('mailing-list') == 'no' ? 'checked' : '' }}>
+                      <label for="opt-out">
+                        <strong>No</strong> thanks
+                      </label>
+                    </div>
                 </div>
 
                 <p class="notice" id="opt-out-notice">Are you sure? If you don't tick yes, we won't be able to keep you updated on this campaign and all our work and fundraising. You can opt out at any time, promise.</p>
 
-                <button type="submit" class="form-control">Send my email</button>
+                <button type="submit">Send my email</button>
             </div>
 
             <div class="disclaimer">

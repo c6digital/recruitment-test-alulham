@@ -38,12 +38,14 @@
                         <p>Enter your postcode below to get started</p>
                     </div>
 
-                    <label for="postcode">Postcode<span class="required">*</span></label>
-                    @if (session('postcode_error'))
-                    <div class="validation-error">{{ session('postcode_error') }}</div>
-                    @endif
-                    <input type="text" name="postcode" autofocus class="form-control text-uppercase" />
-                    <button type="submit" class="form-control">Find my MP</button>
+                    <div class="form-control @if (session('postcode_error')) invalid @endif">
+                        <label for="postcode">Postcode<span class="required">*</span></label>
+                        @if (session('postcode_error'))
+                        <div class="validation-error">{{ session('postcode_error') }}</div>
+                        @endif
+                        <input type="text" name="postcode" autofocus class="text-uppercase" />
+                    </div>
+                    <button type="submit">Find my MP</button>
                 </form>
             </div>
         </div>

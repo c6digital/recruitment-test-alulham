@@ -31,7 +31,7 @@
             </div>
 
             <div class="panel">
-                <textarea rows="10" class="form-control" name="message">Dear {{ $mp->name }}
+                <textarea rows="10" name="message">Dear {{ $mp->name }}
 
 I am writing to ask if you'll stand up for the thousands of UK horses, ponies and donkeys that are smuggled across borders in horrific conditions.
 
@@ -54,7 +54,7 @@ Yours sincerely,</textarea>
                 <p>Your name and address will be added to the end of this email.</p>
             </div>
 
-            <button type="submit" class="form-control">Next</button>
+            <button type="submit">Next</button>
         </form>
     </div>
 </x-base>
