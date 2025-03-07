@@ -275,6 +275,10 @@ form {
     padding-left: 10px;
   }
 
+  .form-check label, .form-check input {
+    cursor: pointer;
+  }
+
   .form-check, .radio-label {
     margin-bottom: 20px;
   }
