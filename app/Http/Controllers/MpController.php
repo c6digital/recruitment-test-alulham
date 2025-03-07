@@ -33,25 +33,43 @@ class MpController extends Controller
         ]);
     }
 
+    public function send_to_mailchimp($email, $first_name, $last_name, $phone) {
+        // 'https://${dc}.api.mailchimp.com/3.0/lists/{list_id}/members/{subscriber_hash}';
+        // $response = Http::put('');
+    }
+
     public function send_email($id, Request $request): RedirectResponse
     {
+        // TODO: sending the email and sending to mailchimp ought to be done async,
+        // as background tasks
+
         $mp = Mp::findOrFail($id);
 
-        // Important TODO: Swap this!
+        $first_name = $request->request->get('first_name');
+        $last_name = $request->request->get('last_name');
+        $email = $request->request->get('email');
+        $message = $request->request->get('message');
+        $subscribe = $request->request->get('mailing-list') === 'yes';
+        $phone = $request->request->get('phone');
+
+        // Important TODO: To send to the actual MP, swap this!
         // $recipient = $mp->email;
-        $recipient = $request->request->get('email');
+        $recipient = $email;
 
         if ($recipient) {
             $emailPayload = [
-                'from_name' => $request->request->get('first_name') . ' ' . $request->request->get('last_name'),
-                'from_email' => $request->request->get('email'),
-                'message' => $request->request->get('message'),
+                'from_name' => $first_name . ' ' . $last_name,
+                'from_email' => $email,
+                'message' => $message,
                 'mp' => $mp
             ];
             Mail::to($recipient)->send(new ConstituentMessage($emailPayload));
         }
 
-        // TODO: if they opted in, send to Mailchimp
+        if ($subscribe) {
+            $this->send_to_mailchimp($email, $first_name, $last_name, $phone);
+        }
+
         // TODO: store total sent by constituency
 
         return redirect()->route('mp.thanks', ['id' => $mp->id]);
