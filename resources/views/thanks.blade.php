@@ -1,6 +1,6 @@
 <x-base>
     <div class="card">
-        <div class="panel">
+        <div class="panel small-pad">
             <div class="progress-bar progress-bar-done">
                 <span class="step step-complete" style="background-image: url({{ asset('img/step-complete.svg') }})"></span>
             </div>

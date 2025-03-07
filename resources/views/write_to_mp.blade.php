@@ -2,7 +2,7 @@
     <div class="card">
         <form method="POST" action="{{ route('mp.save_message', $mp->id) }}">
             @csrf
-            <div class="panel">
+            <div class="panel small-pad">
                 <div class="progress-bar">
                     <span class="step" style="background-image: url({{ asset('img/step-complete.svg') }})"></span>
                     <span class="stroke"></span>

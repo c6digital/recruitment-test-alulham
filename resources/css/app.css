@@ -254,6 +254,14 @@ h2 {
   @screen md {
     padding-bottom: 35px;
   }
+
+  &.small-pad {
+    padding-bottom: 15px;
+
+    @screen md {
+      padding-bottom: 25px;
+    }
+  }
 }
 
 form {
