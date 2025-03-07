@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mp;
 use App\Mail\ConstituentMessage;
+use App\Mail\ThankYouMessage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -40,7 +41,7 @@ class MpController extends Controller
 
     public function send_email($id, Request $request): RedirectResponse
     {
-        // TODO: sending the email and sending to mailchimp ought to be done async,
+        // TODO: sending the emails and sending to mailchimp ought to be done async,
         // as background tasks
 
         $mp = Mp::findOrFail($id);
@@ -65,6 +66,11 @@ class MpController extends Controller
             ];
             Mail::to($recipient)->send(new ConstituentMessage($emailPayload));
         }
+
+        Mail::to($email)->send(new ThankYouMessage([
+            'name' => $first_name . ' ' . $last_name
+        ]));
+
 
         if ($subscribe) {
             $this->send_to_mailchimp($email, $first_name, $last_name, $phone);
