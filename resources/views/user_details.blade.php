@@ -55,7 +55,7 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="mailing-list" id="opt-out" checked>
+                  <input class="form-check-input" type="radio" name="mailing-list" id="opt-out">
                   <label class="form-check-label" for="opt-out">
                     <strong>No</strong> thanks
                   </label>
