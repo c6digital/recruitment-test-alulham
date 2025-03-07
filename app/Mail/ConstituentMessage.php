@@ -26,7 +26,7 @@ class ConstituentMessage extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Constituent Message',
+            subject: 'How to better treat horses in the UK',
         );
     }
 
