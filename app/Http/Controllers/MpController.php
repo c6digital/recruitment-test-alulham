@@ -59,6 +59,11 @@ class MpController extends Controller
         $response = $client->lists->setListMember($audienceId, $subscriberHash, [
             "email_address" => $email,
             "status_if_new" => "pending",
+            "merge_fields" => [
+                "FNAME" => $first_name,
+                "LNAME" => $last_name,
+                "PHONE" => $phone,
+            ]
         ]);
     }
 
