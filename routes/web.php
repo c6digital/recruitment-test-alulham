@@ -9,5 +9,6 @@ Route::post('/', [PostcodeLookupController::class, 'post'])->name('postcode.look
 
 Route::get('/write/{id}', [MpController::class, 'get'])->name('mp.write');
 Route::post('/write/{id}', [MpController::class, 'save_message'])->name('mp.save_message');
+Route::get('/write/{id}/details', [MpController::class, 'get_user_details'])->name('mp.user_details');
 Route::post('/write/{id}/send', [MpController::class, 'send_email'])->name('mp.send_email');
 Route::get('/write/{id}/thanks', [MpController::class, 'thanks'])->name('mp.thanks');

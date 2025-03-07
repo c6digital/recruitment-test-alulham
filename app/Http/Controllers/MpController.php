@@ -28,6 +28,15 @@ class MpController extends Controller
         // Or store a partial message in the database?
         $message = $request->request->get('message');
 
+        $request->session()->put('message', $message);
+
+        return redirect()->route('mp.user_details', ['id' => $mp->id]);
+    }
+
+    public function get_user_details($id, Request $request) {
+        $mp = Mp::findOrFail($id);
+
+        $message = session('message');
         return view('user_details', [
             'mp' => $mp,
             'message' => $message
@@ -46,34 +55,43 @@ class MpController extends Controller
 
         $mp = Mp::findOrFail($id);
 
-        $first_name = $request->request->get('first_name');
-        $last_name = $request->request->get('last_name');
-        $email = $request->request->get('email');
-        $message = $request->request->get('message');
-        $subscribe = $request->request->get('mailing-list') === 'yes';
-        $phone = $request->request->get('phone');
+        $validated = $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'mailing-list' => 'required',
+        ]);
+
+        $full_name = $validated['first_name'] . ' ' . $validated['last_name'];
+        $subscribe = $validated['mailing-list'] === 'yes';
 
         // Important TODO: To send to the actual MP, swap this!
         // $recipient = $mp->email;
-        $recipient = $email;
+        $recipient = $validated['email'];
 
         if ($recipient) {
             $emailPayload = [
-                'from_name' => $first_name . ' ' . $last_name,
-                'from_email' => $email,
-                'msg' => $message,
+                'from_name' => $full_name,
+                'from_email' => $validated['email'],
+                'msg' => $validated['message'],
                 'mp' => $mp
             ];
             Mail::to($recipient)->send(new ConstituentMessage($emailPayload));
         }
 
         Mail::to($email)->send(new ThankYouMessage([
-            'name' => $first_name . ' ' . $last_name
+            'name' => $full_name
         ]));
 
 
         if ($subscribe) {
-            $this->send_to_mailchimp($email, $first_name, $last_name, $phone);
+            $this->send_to_mailchimp(
+                $validated['email'],
+                $validated['first_name'],
+                $validated['last_name'],
+                $validated['phone']
+            );
         }
 
         // TODO: store total sent by constituency

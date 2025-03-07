@@ -30,32 +30,48 @@
                 <div class="form-row">
                     <div>
                         <label for="first_name">First name<span class="required">*</span></label>
-                        <input class="form-control" type="text" name="first_name" required />
+                        @error('first_name')
+                          <div class="validation-error">{{ $message }}</div>
+                        @enderror
+                        <input class="form-control" type="text" name="first_name" value="{{ old('first_name') }}" />
                     </div>
                     <div>
                         <label for="last_name">Last name<span class="required">*</span></label>
-                        <input class="form-control" type="text" name="last_name" required />
+                        @error('last_name')
+                          <div class="validation-error">{{ $message }}</div>
+                        @enderror
+                        <input class="form-control" type="text" name="last_name" value="{{ old('last_name') }}" />
                     </div>
                 </div>
 
                 <label for="email">Email address<span class="required">*</span></label>
-                <input class="form-control" type="email" name="email" required />
+                @error('email')
+                  <div class="validation-error">{{ $message }}</div>
+                @enderror
+                <input class="form-control" type="email" name="email" value="{{ old('email') }}" />
 
                 <label for="phone">Phone number<span class="required">*</span></label>
-                <input class="form-control !mb-0" type="tel" name="phone" autocomplete="tel" required />
+                @error('phone')
+                  <div class="validation-error">{{ $message }}</div>
+                @enderror
+                <input class="form-control !mb-0" type="tel" name="phone" autocomplete="tel" value="{{ old('phone') }}" />
             </div>
 
             <div class="panel">
                 <p class="radio-label">Would you like to receive emails from us with news and updates about our work and fundraising? If you already receive our emails, choosing ‘Yes’ will mean this continues. You can opt out at any time, we promise.<span class="required">*</span></p>
 
+                @error('mailing-list')
+                  <div class="validation-error">{{ $message }}</div>
+                @enderror
+
                 <div class="form-check">
-                  <input type="radio" name="mailing-list" value="yes" id="opt-in" required>
+                  <input type="radio" name="mailing-list" value="yes" id="opt-in" {{ old('mailing-list') == 'yes' ? 'checked' : '' }}>
                   <label for="opt-in">
                     <strong>Yes!</strong> I would like to receive email updates
                   </label>
                 </div>
                 <div class="form-check !mb-0">
-                  <input type="radio" name="mailing-list" value="no" id="opt-out" required>
+                  <input type="radio" name="mailing-list" value="no" id="opt-out" {{ old('mailing-list') == 'no' ? 'checked' : '' }}>
                   <label for="opt-out">
                     <strong>No</strong> thanks
                   </label>
