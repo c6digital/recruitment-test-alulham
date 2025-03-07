@@ -20,7 +20,7 @@
         @endif
     </header>
 
-    <main class="bg-bottom bg-no-repeat" style="background-image: url({{ asset('img/footer.png') }})">
+    <main class="bg-bottom bg-repeat-x" style="background-image: url({{ asset('img/footer.png') }})">
         {{ $slot }}
     </main>
 
